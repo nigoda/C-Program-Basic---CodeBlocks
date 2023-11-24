@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1698382800 source:c:\users\uig43645\desktop\project_2\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1698382343 source:c:\users\uig43645\desktop\project_2\sprintf_.c
+	<stdio.h>
+
