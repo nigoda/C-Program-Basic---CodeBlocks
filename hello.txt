@@ -1,0 +1,86 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+struct student{
+    char Name[30];
+    int RollNo;
+    int age;
+    };
+
+disp_student(struct student *); //arg type is struct pointer
+
+int main()
+{
+    struct student studarr[2] = {
+                                {"abc",101,15},
+                                {"xyz",102,16}
+    };
+
+    disp_student(&studarr); //passing the aarray of structure
+    printf("\n%d",studarr[0].RollNo);
+}
+
+disp_student(struct student *stud)
+{
+
+    stud->RollNo=201;
+
+
+}
+
+####################################################################################
+
+/******************************************************************************
+
+Welcome to GDB Online.
+  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
+  Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+#include <pthread.h>
+int count;
+void *inc(void *arg)
+{
+    while(1){
+        count++;
+        printf("count = %d\n",count);
+    }
+}
+
+
+void *dec(void *arg)
+{
+    while(1){
+        count--;
+        printf("count = %d\n",count);
+    }
+}
+
+
+int main(int argc)
+{
+    count =0;
+    pthread_t id1, id2;
+    
+    pthread_create(&id1, NULL, inc, NULL);
+    pthread_create(&id2, NULL, dec, NULL);
+    
+    // while(1){
+    //     sleep(1);
+    // }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+

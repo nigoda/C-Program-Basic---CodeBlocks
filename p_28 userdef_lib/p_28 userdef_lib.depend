@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1698898403 source:c:\users\uig43645\desktop\p_28 userdef_lib\sub.c
+
+1698898474 source:c:\users\uig43645\desktop\p_28 userdef_lib\main.c
+	"sub.h"
+
+1698897504 c:\users\uig43645\desktop\p_28 userdef_lib\sub.h
+	<stdio.h>
+	<stdlib.h>
+

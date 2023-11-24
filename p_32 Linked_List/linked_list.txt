@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <stdlib.h>
+ 
+ 
+struct node{
+ 
+    int val,i;
+ 
+    struct node *next;
+ 
+};
+int main()
+ 
+{
+int i;
+    struct node *one; // creating node
+ 
+    struct node *two;
+  struct node *head;
+    struct node *three;
+    one = malloc(sizeof(struct node)); // allocating size
+ 
+    two = malloc(sizeof(struct node));
+ 
+    three = malloc(sizeof(struct node));
+    //assignig the value to node
+ 
+    one->val=10;
+ 
+    two->val=20; // -> for accesing pointers in structure
+ 
+    three->val=30;
+    // linking all the nodes
+ 
+    one->next=two;
+ 
+    two->next=three;
+ 
+    three->next=NULL;
+    // print the values
+    head=three;
+ 
+    for(i=3;i>0;i++)
+    {
+ 
+        printf("%d\n",one->val);
+        one=one->next;
+        head=head->next;
+    }
+    /*printf("%d\n",one->next);
+ 
+    printf("%d\n",two->next);
+ 
+    printf("%d\n",three->next);*/
+}
