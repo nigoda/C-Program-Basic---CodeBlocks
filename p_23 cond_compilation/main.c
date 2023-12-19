@@ -7,7 +7,7 @@ int main()
     #ifdef NUMBER
         printf("NUMBER is Defined");
     #else
-        printf("NUMBER is Defined");
+        printf("NUMBER is not Defined");
     #endif // NUMBER
     return 0;
 }
